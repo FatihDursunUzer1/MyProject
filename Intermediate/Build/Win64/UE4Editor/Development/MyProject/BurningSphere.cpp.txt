@@ -1,0 +1,3 @@
+C:\Users\ornek\OneDrive\Belgeler\Unreal Projects\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\Definitions.MyProject.h
+C:\Users\ornek\OneDrive\Belgeler\Unreal Projects\MyProject\Source\MyProject\BurningSphere.h
+C:\Users\ornek\OneDrive\Belgeler\Unreal Projects\MyProject\Intermediate\Build\Win64\UE4Editor\Inc\MyProject\BurningSphere.generated.h

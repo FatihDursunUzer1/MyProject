@@ -1,0 +1,5 @@
+C:\Users\ornek\OneDrive\Belgeler\Unreal Projects\MyProject\Intermediate\Build\Win64\UE4Editor\Development\MyProject\Definitions.MyProject.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\Epic Games\UE_4.25\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Users\ornek\OneDrive\Belgeler\Unreal Projects\MyProject\Source\MyProject/BurningSphere.h
+C:\Users\ornek\OneDrive\Belgeler\Unreal Projects\MyProject\Intermediate\Build\Win64\UE4Editor\Inc\MyProject\BurningSphere.generated.h
