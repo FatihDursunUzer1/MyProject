@@ -36,4 +36,14 @@ public:
 		UCameraComponent* CameraOfCharacter;
 	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
 		USkeletalMeshComponent* CharacterMesh;
+	void Fire();
+	void FireInDirection(const FVector& ShootDirection);
+	/*Merminin yumurtlama yerini hesaplamak için vektör oluþturma*/
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)/*EditAnywhere=Blue printte düzenlememize yarýyor , BlueprintReadWrite blueprintten veri okumamýz ve yazmamýza yarýyor*/
+		FVector MuzzleOffset;
+
+	// Projectile class to spawn.
+	/*EditDefaultsOnly belirteci, Blueprint öðesinin her örneðinde deðil, mermi sýnýfýný yalnýzca Blueprint'te varsayýlan olarak ayarlayabileceðiniz anlamýna gelir.*/
+	UPROPERTY(EditDefaultsOnly, Category = Projectile)
+		TSubclassOf<class AGameProjectile> ProjectileClass;
 };

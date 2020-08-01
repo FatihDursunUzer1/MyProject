@@ -56,7 +56,7 @@ void AGameCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	/*If Player Press 'Space Bar' on keyboard  character  jumps*/
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AGameCharacter::Jump);
 	// If Player Press '1' on keyboard Particle Toggle becomes active
-	//PlayerInputComponent->BindAction("ParticleToggle", IE_Pressed, this, &AGameCharacter::ParticleToggle);
+	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AGameCharacter::Fire);
 
 }
 
@@ -65,12 +65,17 @@ void AGameCharacter::MoveForward(float Value)
 	FVector Director = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::X);
 	AddMovementInput(Director, Value);
 }
-
+/*Function that initializes the projectile's velocity in the shoot direction.*/
 void AGameCharacter::MoveRight(float Value)
 {
 	FVector Director = FRotationMatrix(Controller->GetControlRotation()).GetScaledAxis(EAxis::Y);
 	AddMovementInput(Director, Value);
 }
+
+void AGameCharacter::Fire()
+{
+}
+
 
 /*void AGameCharacter::ParticleToggle()
 {

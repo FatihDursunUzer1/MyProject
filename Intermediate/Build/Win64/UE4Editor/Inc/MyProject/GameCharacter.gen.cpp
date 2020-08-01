@@ -17,6 +17,9 @@ void EmptyLinkFunctionForGeneratedCodeGameCharacter() {}
 	MYPROJECT_API UClass* Z_Construct_UClass_AGameCharacter();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_MyProject();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	MYPROJECT_API UClass* Z_Construct_UClass_AGameProjectile_NoRegister();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 // End Cross Module References
@@ -121,6 +124,14 @@ void EmptyLinkFunctionForGeneratedCodeGameCharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ProjectileClass_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ProjectileClass;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MuzzleOffset_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_MuzzleOffset;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CharacterMesh_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CharacterMesh;
@@ -148,26 +159,42 @@ void EmptyLinkFunctionForGeneratedCodeGameCharacter() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGameCharacter_Statics::NewProp_ProjectileClass_MetaData[] = {
+		{ "Category", "Projectile" },
+		{ "Comment", "/*EditDefaultsOnly belirteci, Blueprint ??esinin her ?rne?inde de?il, mermi s?n?f?n? yaln?zca Blueprint'te varsay?lan olarak ayarlayabilece?iniz anlam?na gelir.*/" },
+		{ "ModuleRelativePath", "GameCharacter.h" },
+		{ "ToolTip", "EditDefaultsOnly belirteci, Blueprint ??esinin her ?rne?inde de?il, mermi s?n?f?n? yaln?zca Blueprint'te varsay?lan olarak ayarlayabilece?iniz anlam?na gelir." },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AGameCharacter_Statics::NewProp_ProjectileClass = { "ProjectileClass", nullptr, (EPropertyFlags)0x0014000000010001, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGameCharacter, ProjectileClass), Z_Construct_UClass_AGameProjectile_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AGameCharacter_Statics::NewProp_ProjectileClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGameCharacter_Statics::NewProp_ProjectileClass_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGameCharacter_Statics::NewProp_MuzzleOffset_MetaData[] = {
+		{ "Category", "Gameplay" },
+		{ "Comment", "/*EditAnywhere=Blue printte d?zenlememize yar?yor , BlueprintReadWrite blueprintten veri okumam?z ve yazmam?za yar?yor*/" },
+		{ "ModuleRelativePath", "GameCharacter.h" },
+		{ "ToolTip", "EditAnywhere=Blue printte d?zenlememize yar?yor , BlueprintReadWrite blueprintten veri okumam?z ve yazmam?za yar?yor" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_AGameCharacter_Statics::NewProp_MuzzleOffset = { "MuzzleOffset", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGameCharacter, MuzzleOffset), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_AGameCharacter_Statics::NewProp_MuzzleOffset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGameCharacter_Statics::NewProp_MuzzleOffset_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGameCharacter_Statics::NewProp_CharacterMesh_MetaData[] = {
 		{ "Category", "Mesh" },
-		{ "Comment", "/*UFUNCTION()\n\x09\x09void ParticleToggle();*/" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "GameCharacter.h" },
-		{ "ToolTip", "UFUNCTION()\n               void ParticleToggle();" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGameCharacter_Statics::NewProp_CharacterMesh = { "CharacterMesh", nullptr, (EPropertyFlags)0x00100000000b0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGameCharacter, CharacterMesh), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGameCharacter_Statics::NewProp_CharacterMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGameCharacter_Statics::NewProp_CharacterMesh_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGameCharacter_Statics::NewProp_CameraOfCharacter_MetaData[] = {
 		{ "Category", "GameCharacter" },
-		{ "Comment", "/*UPROPERTY()\n\x09\x09""class UParticleSystemComponent* OurParticleSystem;*/" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "GameCharacter.h" },
-		{ "ToolTip", "UPROPERTY()\n               class UParticleSystemComponent* OurParticleSystem;" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGameCharacter_Statics::NewProp_CameraOfCharacter = { "CameraOfCharacter", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGameCharacter, CameraOfCharacter), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGameCharacter_Statics::NewProp_CameraOfCharacter_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGameCharacter_Statics::NewProp_CameraOfCharacter_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGameCharacter_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGameCharacter_Statics::NewProp_ProjectileClass,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGameCharacter_Statics::NewProp_MuzzleOffset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGameCharacter_Statics::NewProp_CharacterMesh,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGameCharacter_Statics::NewProp_CameraOfCharacter,
 	};
@@ -198,7 +225,7 @@ void EmptyLinkFunctionForGeneratedCodeGameCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGameCharacter, 1456376706);
+	IMPLEMENT_CLASS(AGameCharacter, 3954794329);
 	template<> MYPROJECT_API UClass* StaticClass<AGameCharacter>()
 	{
 		return AGameCharacter::StaticClass();
